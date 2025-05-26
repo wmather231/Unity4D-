@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace Unity4D
 {
+    [Serializable]
     public class ViewportQuad
     {
         public Vector3 Center;
