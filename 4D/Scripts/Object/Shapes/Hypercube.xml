@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Object4D>
+	<From>4, 0, 0, 0</From>
+	<To>0, 0, 0 , 0</To>
+	<Up>0, 1, 0, 0</Up>
+	<ViewingAngle>45</ViewingAngle>
+		<VertexList>
+			<Vertex x = "-1" y ="-1" z = "-1" w = "-1"></Vertex>
+			<Vertex>1, -1, -1, -1</Vertex>
+			<Vertex>1, 1, -1, -1</Vertex>
+			<Vertex>-1, 1, -1, -1</Vertex>
+
+			<Vertex>-1,-1, 1,-1</Vertex>
+			<Vertex>1,-1, 1,-1</Vertex>
+			<Vertex>1, 1, 1,-1</Vertex>
+			<Vertex>-1, 1, 1,-1</Vertex>
+
+			<Vertex>-1,-1,-1, 1</Vertex>
+			<Vertex>1, -1, -1, 1</Vertex>
+			<Vertex>1, 1, -1, 1</Vertex>
+			<Vertex>-1, 1, -1, 1</Vertex>
+
+			<Vertex>-1, -1, 1, 1</Vertex>
+			<Vertex>1, -1, 1, 1</Vertex>
+			<Vertex>1, 1, 1, 1</Vertex>
+			<Vertex>-1, 1, 1, 1</Vertex>	
+	</VertexList>
+		<EdgeList>
+			<Edge v1 = "0" v2 = "1"></Edge>
+			<Edge>1, 2</Edge>
+			<Edge>2, 3</Edge>
+			<Edge>3, 0</Edge>
+
+			<Edge>4, 5</Edge>
+			<Edge>5, 6</Edge>
+			<Edge>6, 7</Edge>
+			<Edge>7, 4</Edge>
+
+			<Edge>0, 4</Edge>
+			<Edge>1, 5</Edge>
+			<Edge>2, 6</Edge>
+			<Edge>3, 7</Edge>
+
+			<Edge>8, 9</Edge>
+			<Edge>9, 10</Edge>
+			<Edge>10, 11</Edge>
+			<Edge>11, 8</Edge>
+
+			<Edge>12, 13</Edge>
+			<Edge>13, 14</Edge>
+			<Edge>14, 15</Edge>
+			<Edge>15, 12</Edge>
+
+			<Edge>8, 12</Edge>
+			<Edge>9, 13</Edge>
+			<Edge>10, 14</Edge>
+			<Edge>11, 15</Edge>
+
+			<Edge>0, 8</Edge>
+			<Edge>1, 9</Edge>
+			<Edge>2, 10</Edge>
+			<Edge>3, 11</Edge>
+			<Edge>4, 12</Edge>
+			<Edge>5, 13</Edge>
+			<Edge>6, 14</Edge>
+			<Edge>7, 15</Edge>
+		</EdgeList>
+</Object4D>
