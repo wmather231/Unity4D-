@@ -23,7 +23,7 @@ namespace Unity4D
 
         private void Start()
         {
-            object4D = new Hexadecachoron();
+            object4D = new Object4D();
                 viewport = new ViewportQuad(object4D.to);
                 Projection4D.DoMaths4DTo3D(object4D, viewport);
                 from = object4D.from;
