@@ -12,8 +12,8 @@ namespace Unity4D
     {
         public Object4D object4D;
         public ViewportQuad viewport;
-        public Vector4 from, to, up, over;
-        public float viewingAngle;
+        private Vector4 from, to, up, over;
+        private float viewingAngle;
         private bool wireFrameCreated = false;
 
         //Uncomment if you wish to use DrawGizmos() to display object
