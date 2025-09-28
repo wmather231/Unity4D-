@@ -1,0 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Drawing;
+using UnityEngine;
+using static UnityEngine.Mathf;
+
+//This class will act as the new ObjectManager when finished
+//It will contain functions to perform specific actions on a specific object, meaning you can have multiple 4D objects in the scene acting independently
+//ObjectGenerator will remain as a MonoBehaviour to create the objects
+namespace Unity4D
+{
+    public class ObjectManager4D
+    {
+        bool isDepthCued;
+        private delegate void MyDelegate(Object4D obj);
+        private MyDelegate myDelegate;
+
+        void GenerateObject(Object4D object4D, ViewportQuad viewport)
+        {
+            Projection4D.DoMaths4DTo3D(object4D, viewport);
+            Projection4D.Calc4Matrix(object4D);
+            Projection4D.Project4DTo3D(object4D, viewport);
+            myDelegate = MeshCreation.UpdateWireFrame;
+        }
+        void GenerateObjectDepthCued(Object4D object4D, ViewportQuad viewport)
+        {
+            Projection4D.DoMaths4DTo3D(object4D, viewport);
+            Projection4D.Calc4Matrix(object4D);
+            Projection4D.Project4DTo3D(object4D, viewport);
+            MeshCreation.MakeWireFrame(object4D);
+            myDelegate = MeshCreation.UpdateWireFrameDepthCue;
+        }
+
+        public void RotateObject(Object4D object4D, ViewportQuad viewport,  int x, int y, int planeRotate1, int planeRotate2)
+        {
+            Rotate4D.RotateView(object4D, viewport, Cos(x), Sin(y), planeRotate1, planeRotate2);
+        }
+
+        public void MoveObject(Object4D object4D, ViewportQuad viewport)
+        {
+
+        }
+    }
+}
